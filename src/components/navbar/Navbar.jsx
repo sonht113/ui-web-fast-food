@@ -5,11 +5,11 @@ import { HiOutlineLogin } from "react-icons/hi";
 import {Link} from "react-router-dom"
 
 import logo from "../../logo.svg";
-import "./Navbar.css";
+import "../../assets/css/Navbar.css";
 
 function Navbar() {
   return (
-    <div className="navbar flex flex-col justify-center border py-3 rounded-xl">
+    <div className="navbar flex flex-col justify-center py-3 rounded-xl mr-10">
       <div className="navbar-item navbar-logo">
         <Link to="/" className="logo-link">
             <img src={logo} alt="logo" className="logo object-cover" />
