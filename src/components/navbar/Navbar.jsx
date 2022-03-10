@@ -1,10 +1,9 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import { IoReceiptOutline } from "react-icons/io5";
 import {
   AiOutlineShop,
-  AiOutlineMessage,
   AiOutlineSetting,
   AiOutlineLogout,
+  AiOutlineBook
 } from "react-icons/ai";
 import { HiOutlineLogin } from "react-icons/hi";
 
@@ -40,30 +39,15 @@ function Navbar() {
         </li>
         <li key={2} className="nav-item my-8 cursor-pointer">
           <Link
-            to="/chat"
+            to="/about"
             className="nav-link group Itemlink flex flex-col items-center py-4  rounded-xl hover:bg-rose-600 duration-500"
           >
             <div className="nav-item__icon mb-2">
-              <AiOutlineMessage className="text-3xl fill-pink-600 group-hover:fill-white" />
+              <AiOutlineBook className="text-3xl fill-pink-600 group-hover:fill-white" />
             </div>
             <div className="navbar-item__text">
               <span className="text-sm text-rose-600 group-hover:text-white">
-                Chat
-              </span>
-            </div>
-          </Link>
-        </li>
-        <li key={3} className="nav-item my-8 cursor-pointer">
-          <Link
-            to="/bill"
-            className="nav-link group Itemlink flex flex-col items-center py-4  rounded-xl hover:bg-rose-600 duration-500"
-          >
-            <div className="nav-item__icon mb-2">
-              <IoReceiptOutline className="text-3xl stroke-pink-600 group-hover:stroke-white" />
-            </div>
-            <div className="navbar-item__text">
-              <span className="text-sm text-rose-600 group-hover:text-white">
-                Bill
+                About
               </span>
             </div>
           </Link>

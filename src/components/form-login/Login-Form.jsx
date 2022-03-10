@@ -11,7 +11,7 @@ function LoginForm() {
           src={LoginImage}
           alt=""
           className="object-cover"
-          style={{ maxWidth: "100%" }}
+          style={{ maxWidth: "100%", height: "100%" }}
         />
       </div>
       <div className="Form-Login col-span-4">
@@ -106,7 +106,7 @@ function LoginForm() {
                 <p className="font-medium text-gray-400">
                   Do you have an account?
                   <Link
-                    className="cursor-pointer hover:text-pink-600 ml-1"
+                    className="cursor-pointer text-black hover:text-pink-600 ml-1"
                     to="/sign-up"
                   >
                     Sign up <HiArrowSmRight className="inline-block" />
