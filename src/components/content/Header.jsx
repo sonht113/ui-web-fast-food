@@ -6,7 +6,7 @@ function Header() {
             <span className="text-4xl font-extralight"> Category</span>
         </span>
       </div>
-      <div className="SearchInput flex items-center">
+      <div className="SearchInput flex items-center border-b border-gray-400">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="w-6 h-6 mr-2 text-gray-600"
@@ -25,7 +25,7 @@ function Header() {
         type="text"
         name="name"
         placeholder="Search for food, coffe, etc."
-        className="w-80 py-2 border-b border-gray-400 outline-none focus:border-green-400"
+        className="w-80 py-2 outline-none focus:border-green-400"
       />
       </div>
     </div>
