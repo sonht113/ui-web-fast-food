@@ -1,0 +1,15 @@
+.carousel {
+    padding: 10px 10px 0;
+    border-radius: 4px;
+    width: 375px;
+    margin: auto;
+  }
+  .carousel__main {
+    border-radius: 4px;
+    height: 110px;
+  }
+  
+  .demo-item {
+    height: 110px;
+  }
+  

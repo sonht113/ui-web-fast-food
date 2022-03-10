@@ -9,7 +9,7 @@ import "../../assets/css/Navbar.css";
 
 function Navbar() {
   return (
-    <div className="navbar flex flex-col justify-center py-3 rounded-xl mr-10">
+    <div className="navbar flex flex-col py-3 rounded-xl mr-10">
       <div className="navbar-item navbar-logo">
         <Link to="/" className="logo-link">
             <img src={logo} alt="logo" className="logo object-cover" />
@@ -46,7 +46,7 @@ function Navbar() {
             </div>
           </Link>
         </li>
-        <li key={4} className="nav-item my-8 cursor-pointer">
+        <li key={5} className="nav-item my-8 cursor-pointer">
           <Link to="/settings" className="nav-link group Itemlink flex flex-col items-center py-4  rounded-xl hover:bg-rose-600 duration-500">
             <div className="nav-item__icon mb-2">
               <AiOutlineSetting className="text-3xl fill-pink-600 group-hover:fill-white" />
@@ -56,7 +56,7 @@ function Navbar() {
             </div>
           </Link>
         </li>
-        <li key={5} className="nav-item my-8 cursor-pointer">
+        <li key={6} className="nav-item my-8 cursor-pointer">
           <Link to="/login" className="nav-link group Itemlink flex flex-col items-center py-4  rounded-xl hover:bg-rose-600 duration-500">
             <div className="nav-item__icon mb-2">
               <HiOutlineLogin className="text-3xl stroke-pink-600 group-hover:stroke-white" />
@@ -68,7 +68,7 @@ function Navbar() {
         </li>
       </ul>
       <ul className="Menu mt-8">
-        <li key={6} className="nav-item cursor-pointer">
+        <li key={7} className="nav-item cursor-pointer">
             <Link to="/login" className="nav-link group Itemlink flex flex-col items-center py-4  rounded-xl hover:bg-rose-600 duration-500">
                 <div className="nav-item__icon mb-2">
                 <AiOutlineLogout className="text-3xl fill-gray-400 group-hover:fill-white" />
