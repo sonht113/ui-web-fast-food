@@ -8,14 +8,17 @@
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^13.2.1",
     "clsx": "^1.1.1",
+    "flat-carousel": "^0.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
+    "react-slideshow-image": "^3.7.0",
     "redux": "^4.1.2",
     "sass": "^1.49.9",
+    "swiper": "^8.0.7",
     "web-vitals": "^2.1.0"
   },
   "scripts": {

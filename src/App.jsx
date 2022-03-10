@@ -3,9 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/Home";
-import Login from "./pages/Login";
 import Settings from "./pages/Settings";
 import Bill from "./pages/Bill";
+import Login from './pages/Login';
+import Register from './pages/Register';
+
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
             <Route path="/" element={<Home />}></Route>
             <Route path="/bill" element={<Bill />}></Route>
             <Route path="/login" element={<Login />}></Route>
+            <Route path="/sign-up" element={<Register />}></Route>
             <Route path="/settings" element={<Settings />}></Route>
           </Routes>
         </div>
