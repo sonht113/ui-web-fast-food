@@ -7,11 +7,11 @@ function Products() {
         <div className="Products">
             <HeaderProducts/>
             <div className="List-Products grid md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-x-16 gap-y-16 md:gap-x-5 px-10 mt-14">
-                <div className="flex relative flex-col items-center shadow-lg cursor-pointer py-5 rounded-lg transition group ease-in-out delay-150 hover:scale-110 duration-300">
+                <div className="flex relative group flex-col items-center shadow-lg cursor-pointer py-5 rounded-lg transition group ease-in-out delay-150 hover:scale-110 duration-300">
                     <div className="Box-New absolute top-0 right-0 bg-red-400 px-2">
                         <span className="text-white">New</span>
                     </div>
-                    <div className="Product-image p-3 bg-yellow-200 rounded-full">
+                    <div className="Product-image p-3 bg-yellow-200 rounded-full group-hover:animate-bounce delay-150">
                         <img src={burger} alt="burger" className="w-full object-cover group-hover:scale-100 " style={{width: "100px", height: "100px"}}/>
                     </div>    
                     <div className="Product-Content text-center mt-5">

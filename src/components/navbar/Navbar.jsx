@@ -3,7 +3,7 @@ import {
   AiOutlineShop,
   AiOutlineSetting,
   AiOutlineLogout,
-  AiOutlineBook
+  AiOutlineContacts
 } from "react-icons/ai";
 import { HiOutlineLogin } from "react-icons/hi";
 
@@ -39,15 +39,15 @@ function Navbar() {
         </li>
         <li key={2} className="nav-item my-8 cursor-pointer">
           <Link
-            to="/about"
+            to="/contact-us"
             className="nav-link group Itemlink flex flex-col items-center py-4  rounded-xl hover:bg-rose-600 duration-500"
           >
             <div className="nav-item__icon mb-2">
-              <AiOutlineBook className="text-3xl fill-pink-600 group-hover:fill-white" />
+              <AiOutlineContacts className="text-3xl fill-pink-600 group-hover:fill-white" />
             </div>
             <div className="navbar-item__text">
               <span className="text-sm text-rose-600 group-hover:text-white">
-                About
+              Contact us
               </span>
             </div>
           </Link>

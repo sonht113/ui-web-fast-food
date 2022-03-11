@@ -1,5 +1,5 @@
 
-function About() {
+function ContactUs() {
     return(
         <>
             <h1>This is chat page</h1>
@@ -7,4 +7,4 @@ function About() {
     )
 }
 
-export default About;
+export default ContactUs;
