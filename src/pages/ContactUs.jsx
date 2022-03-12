@@ -1,10 +1,10 @@
-
-function ContactUs() {
+import ContactUs from "../components/contact-us/ContactUs"
+function ContactUsPage() {
     return(
         <>
-            <h1>This is chat page</h1>
+            <ContactUs />
         </>
     )
 }
 
-export default ContactUs;
+export default ContactUsPage;

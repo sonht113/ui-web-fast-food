@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.2.1",
     "clsx": "^1.1.1",
     "flat-carousel": "^0.0.1",
+    "lottie-react": "^2.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
