@@ -97,7 +97,7 @@ function Navbar() {
             />
           </div>
         </li>
-        <li key={7} className="nav-item cursor-pointer">
+        <li key={8} className="nav-item cursor-pointer">
           <Link
             to="/login"
             className="nav-link group Itemlink flex flex-col items-center py-4  rounded-xl hover:bg-rose-600 duration-500"
