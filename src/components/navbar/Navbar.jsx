@@ -9,16 +9,17 @@ import { HiOutlineLogin } from "react-icons/hi";
 
 import { Link } from "react-router-dom";
 
-import logo from "../../logo.svg";
+import logo from "../../assets/images/logodf.png";
 import "../../assets/css/Navbar.css";
 import avatar from "../../assets/images/user.jpg";
 
 function Navbar() {
   return (
-    <div className="navbar flex flex-col py-3 rounded-xl mr-10 border border-gray-300">
+    <div className="navbar flex flex-col py-3 rounded-xl mr-10">
       <div className="navbar-item navbar-logo">
-        <Link to="/" className="logo-link">
-          <img src={logo} alt="logo" className="logo object-cover" />
+        <Link to="/" className="logo-link flex items-center justify-center">
+          <div></div>
+          <img src={logo} alt="logo" className="logo object-cover w-2/4" />
         </Link>
       </div>
       <ul className="Menu">
@@ -90,11 +91,13 @@ function Navbar() {
         >
           <div></div>
           <div>
+            <Link to="/settings">
             <img
               src={avatar}
               alt="Profile image"
               className="inline object-cover w-12 h-12 rounded-full"
             />
+            </Link>
           </div>
         </li>
         <li key={8} className="nav-item cursor-pointer">
