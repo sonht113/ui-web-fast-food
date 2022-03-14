@@ -1,11 +1,12 @@
 import React from "react";
 import LoginImage from "../../assets/images/login-image.jpg";
+import Logo from "../../assets/images/logodf.png"
 import { HiOutlineLockClosed, HiArrowSmRight } from "react-icons/hi";
 import { Link } from "react-router-dom";
 
 function LoginForm() {
   return (
-    <div className="Login grid grid-cols-12 w-3/4 mx-auto mt-24 border-2 shadow-2xl bg-gray-200">
+    <div className="Login grid grid-cols-12 w-3/4 mx-auto mt-24 border-2 shadow-2xl overflow-hidden rounded-2xl">
       <div className="Login-Image col-span-8">
         <img
           src={LoginImage}
@@ -20,7 +21,7 @@ function LoginForm() {
             <div>
               <img
                 className="mx-auto h-12 w-auto"
-                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                src={Logo}
                 alt="Workflow"
               />
               <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
