@@ -1,4 +1,6 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route, useLocation} from "react-router-dom";
+import { AnimatePresence} from "framer-motion";
+
 
 import "./App.css";
 import Navbar from "./components/navbar/Navbar";
@@ -15,13 +17,15 @@ function App() {
       <Router>
         <Navbar />
         <div className="Main w-full">
-          <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="/contact-us" element={<ContactUsPage />}></Route>
-            <Route path="/login" element={<Login />}></Route>
-            <Route path="/sign-up" element={<Register />}></Route>
-            <Route path="/settings" element={<Settings />}></Route>
-          </Routes>
+          <AnimatePresence exitBeforeEnter>
+            <Routes>
+              <Route path="/" element={<Home/>}/>
+              <Route path="/contact-us" element={<ContactUsPage/>}/>
+              <Route path="/login" element={<Login/>}/>
+              <Route path="/sign-up" element={<Register/>}/>
+              <Route path="/settings" element={<Settings/>}/>
+            </Routes>
+          </AnimatePresence>
         </div>
       </Router>
     </div>

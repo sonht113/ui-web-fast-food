@@ -1,8 +1,11 @@
 import LoginForm from "../components/form-login/LoginForm";
+import AnimatedPage from "../animation-page/AnimatedPage";
 
 function Login() {
     return(<>
-        <LoginForm />
+        <AnimatedPage>
+            <LoginForm />
+        </AnimatedPage>
     </>)
 }
 

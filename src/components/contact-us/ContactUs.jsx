@@ -53,7 +53,6 @@ function ContactUs() {
                   Your Message
                 </label>
                 <textarea
-                  type="text"
                   rows="5"
                   className="border border-pink-300  focus:outline-none focus:border-pink-600 focus:ring-1 focus:ring-pink-600 p-2 rounded-lg w-3/4"
                   placeholder="Message..."
