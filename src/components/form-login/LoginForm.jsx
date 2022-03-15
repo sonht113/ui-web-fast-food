@@ -61,8 +61,8 @@ function LoginForm() {
                 </div>
               </div>
 
-              <div className="flex items-center justify-between">
-                <div className="flex items-center">
+              <div className="flex-col flex 2xl:flex-row items-center justify-between">
+                <div className="flex items-center mb-5 2xl:mb-0">
                   <input
                     id="remember-me"
                     name="remember-me"
@@ -105,7 +105,7 @@ function LoginForm() {
               </div>
               <div className="text-sm text-center">
                 <p className="font-medium text-gray-400">
-                  Do you have an account?
+                  Do you have an account? <br />
                   <Link
                     className="cursor-pointer text-black hover:text-pink-600 ml-1"
                     to="/sign-up"

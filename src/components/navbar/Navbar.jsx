@@ -15,7 +15,7 @@ import avatar from "../../assets/images/user.jpg";
 
 function Navbar() {
   return (
-    <div className="navbar flex flex-col py-3 rounded-xl mr-10">
+    <div className="navbar flex flex-col py-3 rounded-xl mr-10 h-[100%]">
       <div className="navbar-item navbar-logo">
         <Link to="/" className="logo-link flex items-center justify-center">
           <div></div>

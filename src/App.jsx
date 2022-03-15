@@ -13,7 +13,7 @@ import Register from './pages/Register';
 
 function App() {
   return (
-    <div className="App pl-5 pt-5 flex">
+    <div className="App pl-5 flex">
       <Router>
         <Navbar />
         <div className="Main w-full">

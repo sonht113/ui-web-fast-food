@@ -31,23 +31,23 @@ function AccountSetting() {
                 <div className="formChangeDataUser space-y-6 mt-8">
                     <div className="firstName">
                         <label className="block text-sm text-gray-400 mb-2">First Name</label>
-                        <input type="text" className="px-4 py-2 border border-gray-400 placeholder:text-sm rounded-xl focus:outline-none" placeholder="Enter the first name..."/>
+                        <input type="text" className="px-4 py-2 border border-gray-400 placeholder:text-sm w-4/5 2xl:w-5/6 rounded-xl focus:outline-none" placeholder="Enter the first name..."/>
                     </div>
                     <div className="lastName">
                         <label className="block text-sm text-gray-400 mb-2">Last Name</label>
-                        <input type="text" className="px-4 py-2 border border-gray-400 placeholder:text-sm rounded-xl focus:outline-none" placeholder="Enter the last name..."/>
+                        <input type="text" className="px-4 py-2 border border-gray-400 placeholder:text-sm w-4/5 2xl:w-5/6 rounded-xl focus:outline-none" placeholder="Enter the last name..."/>
                     </div>
                     <div className="email">
                         <label className="block text-sm text-gray-400 mb-2">Your Email</label>
-                        <input type="text" className="px-4 py-2 border border-gray-400 placeholder:text-sm rounded-xl focus:outline-none" placeholder="Enter the your email..."/>
+                        <input type="text" className="px-4 py-2 border border-gray-400 placeholder:text-sm w-4/5 2xl:w-5/6 rounded-xl focus:outline-none" placeholder="Enter the your email..."/>
                     </div>
                     <div className="address">
                         <label className="block text-sm text-gray-400 mb-2">Your Address</label>
-                        <input type="text" className="px-4 py-2 border border-gray-400 placeholder:text-sm rounded-xl focus:outline-none" placeholder="Enter the your address..."/>
+                        <input type="text" className="px-4 py-2 border border-gray-400 placeholder:text-sm w-4/5 2xl:w-5/6 rounded-xl focus:outline-none" placeholder="Enter the your address..."/>
                     </div>
                     <div className="numberPhone">
                         <label className="block text-sm text-gray-400 mb-2">Number Phone</label>
-                        <input type="text" className="px-4 py-2 border border-gray-400 placeholder:text-sm rounded-xl focus:outline-none" placeholder="Enter the number phone..."/>
+                        <input type="text" className="px-4 py-2 border border-gray-400 placeholder:text-sm w-4/5 2xl:w-5/6 rounded-xl focus:outline-none" placeholder="Enter the number phone..."/>
                     </div>
                     <button className="px-8 py-2 rounded-lg bg-pink-600 hover:bg-pink-800 focus:outline-none text-white mt-5 ml-auto">Save</button>
                 </div>

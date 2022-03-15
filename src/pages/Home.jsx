@@ -5,7 +5,7 @@ import AnimatedPage from "../animation-page/AnimatedPage";
 function Home() {
     return(
         <AnimatedPage>
-            <div className="grid grid-cols-12 gap-10">
+            <div className="grid grid-cols-12 gap-10 min-h-screen">
                 <div className="col-span-8">
                     <Content />
                 </div>
