@@ -1,6 +1,12 @@
 import Register from '../components/form-login/Register';
+import AnimatedPage from "../animation-page/AnimatedPage";
 function RegisterPage() {
-    return(<><Register /></>)
+    return(
+        <>
+            <AnimatedPage>
+                <Register />
+            </AnimatedPage>
+        </>)
 }
 
 export default RegisterPage;
