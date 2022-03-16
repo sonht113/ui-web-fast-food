@@ -1,11 +1,25 @@
 
 const categories = ['Hot', 'Burger', 'Pizza', 'Sort Drink', 'Coffee', 'Ice Cream', 'Hotdog']
 
-const names = ['Tree Burger', 'Cheese Burger', 'Double Cheese',
-    'Origin Burger', 'Coca-cola', 'Milk-Coffee', 'Cheese Hotdog',
-    'Double Hotdog', 'ice-cream banana', 'ice-cream kiwi', 'Tree Hotdog',
+const names = [
+    'Tree Burger',
+    'Cheese Burger',
+    'Double Cheese',
+    'Origin Burger',
+    'Coca-cola',
+    'Milk-Coffee',
+    'Cheese Hotdog',
+    'Double Hotdog',
+    'ice-cream banana',
+    'ice-cream kiwi',
+    'Tree Hotdog',
     'Pepsi', '7 Up',
-    'Coffee-Tea', 'Coffee-not-sugar', 'Tree Pizza', 'Double Pizza', 'Cheese Pizza', 'Cheese-Coffee'
+    'Coffee-Tea',
+    'Coffee-not-sugar',
+    'Tree Pizza',
+    'Double Pizza',
+    'Cheese Pizza',
+    'Cheese-Coffee'
 ]
 
 const prices = [12.00, 13.45, 23.67, 12.45, 15.00, 15.23, 21.22, 14.56, 11.46, 10.34, 16.78, 10.56, 43.89, 16.23];
