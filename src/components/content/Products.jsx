@@ -1,4 +1,5 @@
 import HeaderProducts from "./HeaderProducts";
+import { FaHotjar } from "react-icons/fa";
 import {useEffect, useState} from "react";
 import randomProduct from "../../products";
 import {useDispatch, useSelector} from "react-redux";
@@ -25,7 +26,7 @@ function Products() {
                             {
                                 product.new
                                     ? <div className="Box-New absolute top-0 right-0 bg-red-400 px-2">
-                                        <span className="text-white">New</span>
+                                        <span className="text-white italic text-sm">New</span>
                                     </div>
                                     : null
                             }
@@ -33,7 +34,16 @@ function Products() {
                                 <img src={product.image} alt="burger" className="w-full object-cover group-hover:scale-100 " style={{width: "100px", height: "100px"}}/>
                             </div>
                             <div className="Product-Content text-center mt-5">
-                                <h2 className="text-lg">{product.name}</h2>
+                                <div className="relative">
+                                    <h2 className="text-lg">{product.name}</h2>
+                                    {
+                                        product.category === "Hot"
+                                            ? <div className="Box-Hot absolute top-[-10px] right-[-10px]">
+                                                <FaHotjar className="fill-red-600 text-xl" />
+                                            </div>
+                                            : null
+                                    }
+                                </div>
                                 <p className="text-gray-500">$<span>{product.price}</span></p>
                             </div>
                         </div>
