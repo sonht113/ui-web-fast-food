@@ -12,7 +12,11 @@ export default createSlice({
             state.search = action.payload
         },
         handleFilter: (state, action) => {
-            state.handle = action.payload
+            if(action.payload === state.handle) {
+                return void(state.handle = '')
+            } else {
+                return void(state.handle = action.payload)
+            }
         },
         selectFilter: (state, action) => {
             state.select = action.payload
