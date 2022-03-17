@@ -26,13 +26,15 @@ const prices = [12.00, 13.45, 23.67, 12.45, 15.00, 15.23, 21.22, 14.56, 11.46, 1
 
 const images = [
     "/images/burger2.png",
-    "/images/coca.jpeg",
+    "/images/burger.png",
+    "/images/coca.png",
     "/images/coffee1.png",
-    "/images/hotdog.jpeg",
-    "/images/pepsi.jpeg",
+    "/images/hotdog.png",
+    "/images/pepsi.png",
     "/images/pizza.png",
-    "images/pizza2.jpeg"
+    "images/pizza2.png"
 ]
+
 
 
 function randomProduct(count) {

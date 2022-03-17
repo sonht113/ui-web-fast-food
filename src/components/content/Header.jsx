@@ -1,4 +1,18 @@
+
+import {useDispatch} from "react-redux";
+import filterSlice from "./filterSlice";
+import {useState} from "react";
+
+
 function Header() {
+    const [searchText, setSearchText] = useState()
+
+    const dispatch = useDispatch()
+
+    const handleSearchFilter = (e) => {
+        setSearchText(e.target.value)
+        dispatch(filterSlice.actions.searchFilter(e.target.value))
+    }
   return (
     <div className="Header flex justify-between items-center pt-5">
       <div className="TitleContent">
@@ -26,6 +40,7 @@ function Header() {
         name="name"
         placeholder="Search for food, coffe, etc."
         className="w-80 py-2 outline-none focus:border-green-400"
+        onChange={handleSearchFilter}
       />
       </div>
     </div>
