@@ -13,7 +13,9 @@ function Products() {
         dispatch(productsSlice.actions.setProducts(randomProduct(20)))
     }, [])
 
-    const products = useSelector(selectRemainingListProduct)
+    const result = useSelector(selectRemainingListProduct)
+
+    const products = result.products
     return(
         <div className="Products">
             <HeaderProducts/>
