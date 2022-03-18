@@ -3,8 +3,20 @@ import LoginImage from "../../assets/images/login-image.jpg";
 import Logo from "../../assets/images/logodf.png"
 import { HiOutlineLockClosed, HiArrowSmRight } from "react-icons/hi";
 import { Link } from "react-router-dom";
+import {useDispatch} from "react-redux";
+import userSlice from "../settings/content-settings/userSlice";
 
 function LoginForm() {
+  const dispatch = useDispatch()
+  const handleUpdateUser = () => {
+    const user= {
+      image: localStorage.getItem("userAvatar") || '/images/user.jpg',
+      email: 'nhom5@gmail.com',
+      userName: 'Nhom-5'
+    }
+    dispatch(userSlice.actions.updateUser(user))
+    localStorage.setItem("isLogin", "1")
+  }
   return (
     <div className="Login grid grid-cols-12 w-3/4 mx-auto mt-24 border-2 shadow-2xl overflow-hidden rounded-2xl">
       <div className="Login-Image col-span-8">
@@ -92,6 +104,7 @@ function LoginForm() {
                   <button
                     type="submit"
                     className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-pink-600 hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    onClick={() => handleUpdateUser()}
                   >
                     <span className="absolute left-0 inset-y-0 flex items-center pl-3">
                       <HiOutlineLockClosed

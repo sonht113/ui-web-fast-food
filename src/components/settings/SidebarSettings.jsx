@@ -1,36 +1,29 @@
 import { AiOutlineUser, AiFillLock } from "react-icons/ai";
 import { HiSupport } from "react-icons/hi";
-import PasswordSetting from "./content-settings/PasswordSetting";
-import HelpSetting from "./content-settings/HelpSetting";
-import AccountSetting from "./content-settings/AccountSetting";
 
-import {useState} from 'react';
+function SidebarSettings({changeTab, currentLabel}) {
 
-function SidebarSettings({changeTab}) {
-  const [currentLabel, setCurrentLabel] = useState("Account");
-
-  const clickHandle = (label, tab) => {
-    setCurrentLabel(label)
-    changeTab(tab)
+  const clickHandle = (label) => {
+      changeTab(label)
   }
 
   return (
     <div className="sidebarSettings">
       <ul className="menu">
         <TabLabelComponent
-          changeTab={() => clickHandle("Account", AccountSetting)}
+          changeTab={() => clickHandle("Account")}
           title="Account"
           icon={AiOutlineUser}
           active={ currentLabel === "Account" }
         />
         <TabLabelComponent
-          changeTab={() => clickHandle("Password", PasswordSetting)}
+          changeTab={() => clickHandle("Password")}
           title="Password"
           icon={AiFillLock}
           active={ currentLabel === "Password" }
         />
         <TabLabelComponent
-          changeTab={() => clickHandle("Help", HelpSetting)}
+          changeTab={() => clickHandle("Help")}
           title="Help"
           icon={HiSupport}
           active={ currentLabel === "Help" }

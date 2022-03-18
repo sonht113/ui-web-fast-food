@@ -1,29 +1,34 @@
-import avatarDefault from "../../../assets/images/user.jpg"
 import Lottie from "lottie-react";
 import securityAccount from "../../../lotties/cloud-computing-security.json";
-import {useEffect, useState} from "react";
-import foodDeliveryService from "../../../lotties/food-delivery-services-animation.json";
+import defaultUser from "../../../assets/images/user-default.jpeg"
+
+import {useDispatch, useSelector} from "react-redux";
+import {selectRemainingUser} from "../../../redux/selector";
+import userSlice from "./userSlice";
 
 function AccountSetting() {
-    // const [avatar, setAvatar] = useState();
-    // useEffect(() => {
-    //     return () => {
-    //         avatar && URL.revokeObjectURL(avatar.preview);
-    //     }
-    // }, [avatar])
-    // const handleChangeAvatar = (e) => {
-    //     const file = e.target.files[0]
-    //     file.preview = URL.createObjectURL(file)
-    //     setAvatar(file)
-    // }
+    const user = useSelector(selectRemainingUser)
+
+    const dispatch = useDispatch()
+
+    const handleChangeAvatar = (e) => {
+        let reader = new FileReader();
+        reader.readAsDataURL(e.target.files[0])
+        reader.onloadend = (e) => {
+            dispatch(userSlice.actions.updateUser(Object.assign({}, user, {
+                image: reader.result
+            })))
+            localStorage.setItem("userAvatar", reader.result)
+        }
+    }
     return( 
         <div className="accountSetting px-5 mb-10 flex border-l">
             <div className="w-1/2 pl-10">
                 <h1 className="text-4xl text-gray-400 font-extrabold">General Info</h1>
                 <p className="text-sm text-gray-400 mb-5">You can change your info in here...</p>
-                <input id="changeAvatar" type="file" accept="image/*" className="hidden"/>
+                <input id="changeAvatar" type="file" accept="image/*" onChange={(e) => handleChangeAvatar(e)} className="hidden"/>
                 <div className="changeAvatar w-[160px] h-[160px] overflow-hidden rounded-full relative my-5">
-                    <img className="object-cover w-full h-full" src={avatarDefault} alt="avatar"/>
+                    <img className="object-cover w-full h-full" src={user ? user.image : defaultUser} alt="avatar"/>
                     <label htmlFor="changeAvatar" className="absolute w-full h-full cursor-pointer top-0 left-0" />
                 </div>
                 <label htmlFor="changeAvatar" className="px-3 py-2 bg-pink-600 cursor-pointer ml-4 rounded-full text-sm text-white hover:bg-pink-800">Change Avatar</label>
