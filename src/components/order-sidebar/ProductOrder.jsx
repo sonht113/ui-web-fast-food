@@ -1,4 +1,4 @@
-import {selectRemainingOrderProducts} from "../../redux/selector"
+import {selectRemainingOrderProducts, selectRemainingUser} from "../../redux/selector"
 import { HiOutlineEmojiSad } from "react-icons/hi";
 import {useSelector, useDispatch} from "react-redux"
 import {useEffect, useState} from "react";
@@ -9,6 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 function ProductOrder() {
     const [subTotalPrice, setSubTotalPrice] = useState(0)
     const dispatch = useDispatch()
+    const user = useSelector(selectRemainingUser)
   const orderListProducts = useSelector(selectRemainingOrderProducts)
     useEffect(() => {
         setSubTotalPrice(() => {
@@ -21,16 +22,28 @@ function ProductOrder() {
     }, [orderListProducts])
 
     const handlePurchase = () => {
-        dispatch(orderSlice.actions.purchaseOrderProduct())
-        toast.success(' 🥰 Purchase successfully !!!', {
-            position: "top-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-        });
+        if(user === undefined) {
+            return toast.warn('🤩⚠️ You must login !!!', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
+        } else {
+            dispatch(orderSlice.actions.purchaseOrderProduct())
+            toast.success(' 🥰 Purchase successfully !!!', {
+                position: "top-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
+        }
     }
 
   return (
