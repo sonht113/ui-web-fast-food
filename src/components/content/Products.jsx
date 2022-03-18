@@ -1,9 +1,10 @@
 import HeaderProducts from "./HeaderProducts";
 import { FaHotjar } from "react-icons/fa";
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 import randomProduct from "../../products";
 import {useDispatch, useSelector} from "react-redux";
 import productsSlice from "./productsSlice";
+import orderSlice from "../order-sidebar/orderSlice";
 import {selectRemainingListProduct} from "../../redux/selector";
 
 function Products() {
@@ -25,7 +26,13 @@ function Products() {
                             <h1 className="text-center text-2xl font-bold text-pink-600">Not found product :((( </h1>
                         </div>
                     : products.map((product, index) => (
-                        <div key={index} className="flex relative group flex-col items-center shadow-lg cursor-pointer py-5 rounded-lg transition group ease-in-out delay-150 hover:scale-110 duration-300">
+                        <div
+                            key={index}
+                            className="flex relative group flex-col items-center shadow-lg cursor-pointer py-5 rounded-lg transition group ease-in-out delay-150 hover:scale-110 duration-300"
+                            onClick={() => {
+                                console.log(product)
+                                dispatch(orderSlice.actions.addOrderProduct(product))}}
+                        >
                             {
                                 product.new
                                     ? <div className="Box-New absolute top-0 right-0 bg-red-400 px-2">

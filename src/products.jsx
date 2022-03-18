@@ -1,4 +1,4 @@
-
+import { v4 as uuidv4} from "uuid"
 const categories = ['Hot', 'Burger', 'Pizza', 'Sort Drink', 'Coffee', 'Ice Cream', 'Hotdog']
 
 const names = [
@@ -42,17 +42,15 @@ function randomProduct(count) {
     // eslint-disable-next-line no-unused-vars
     for(let i = 0; i < count; i++) {
         let product = {
+            id: uuidv4(),
             category: categories[randomIndex(categories.length)],
             name: names[randomIndex(names.length)],
             price: prices[randomIndex(prices.length)],
             image: images[randomIndex(images.length)],
-            new: randomIndex(3) === 1,
-            counter: 0
+            new: randomIndex(3) === 1
         }
-
         PRODUCTS.push(product)
     }
-
     return PRODUCTS
 }
 

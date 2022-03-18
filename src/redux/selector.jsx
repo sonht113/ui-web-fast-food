@@ -4,6 +4,8 @@ const selectorSearchFilter = (state) => state.filters.search
 const selectorHandleFilter = (state) => state.filters.handle
 const selectorSelectFilter = (state) => state.filters.select
 const selectorListProduct = (state) => state.products
+const selectorOrderProducts = (state) => state.orders.orderProducts
+const selectorUser = (state) => state.users.currentUser
 
 export const selectRemainingListProduct = createSelector(
     selectorListProduct,
@@ -53,3 +55,17 @@ export const selectRemainingListProduct = createSelector(
         }
     }
 })
+
+export const selectRemainingOrderProducts = createSelector(
+    selectorOrderProducts,
+    (orderProducts) => {
+        return orderProducts
+    }
+)
+
+export const selectRemainingUser = createSelector(
+    selectorUser,
+    (currentUser) => {
+        return currentUser
+    }
+)
